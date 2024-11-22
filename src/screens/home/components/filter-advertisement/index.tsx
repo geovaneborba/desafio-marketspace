@@ -52,6 +52,7 @@ type FilterAdProps = {
 
 export function FilterAdvertisement({ bottomSheetModalRef }: FilterAdProps) {
   const snapPoints = useMemo(() => ['40%', '75%'], [])
+
   const { handleClearFilters, fetchFilteredProducts } = useSearchForm()
 
   const handleCloseBottomSheet = () => {

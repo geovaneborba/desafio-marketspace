@@ -67,14 +67,27 @@ export function SearchFormProvider({
     mutationFn: async (data: SearchFormData) => {
       const { isNew, paymentMethods, acceptTrade, search } = data
 
-      const response = await api.get<AdvertisementListDTO[]>('/products', {
-        params: {
-          query: search,
-          is_new: isNew === 'new' ? true : false,
-          accept_trade: acceptTrade,
-          payment_methods: paymentMethods?.map((method) => method.key),
-        },
-      })
+      const url = new URL('/products', api.defaults.baseURL)
+
+      if (search) {
+        url.searchParams.set('query', search)
+      }
+
+      if (isNew) {
+        url.searchParams.set('is_new', isNew === 'new' ? 'true' : 'false')
+      }
+
+      if (acceptTrade) {
+        url.searchParams.set('accept_trade', acceptTrade.toString())
+      }
+
+      if (paymentMethods.length > 0) {
+        paymentMethods.forEach((method) => {
+          url.searchParams.append('payment_methods[]', method.key)
+        })
+      }
+
+      const response = await api.get<AdvertisementListDTO[]>(String(url))
 
       return response.data
     },
@@ -94,8 +107,6 @@ export function SearchFormProvider({
 
   const fetchFilteredProducts = async () => {
     const result = await searchFormSchema.safeParseAsync(searchFormData)
-
-    console.log(result.data)
 
     if (result.success) {
       await searchMutation.mutateAsync(result.data)
