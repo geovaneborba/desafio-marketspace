@@ -5,6 +5,8 @@ export const ProductItemPressable = styled(Pressable)``
 
 export const ContainerRelative = styled(View)`
   position: relative;
+  background-color: ${(props) => props.theme.colors['gray-7']};
+  border-radius: 8px;
 `
 export const ProfileImage = styled.Image`
   position: absolute;

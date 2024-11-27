@@ -20,10 +20,10 @@ import { Exchange } from './components/exchange'
 import { Description } from './components/description'
 import { User } from './components/user'
 import { DialogContact } from './components/dialog-contact'
+import { AdvertisementSkeleton } from './components/advertisement-skeleton'
 
 import * as S from './styles'
-
-import { AdvertisementSkeleton } from './components/advertisement-skeleton'
+import { NoProductImage } from './components/no-product-image'
 
 export default function AdvertisementDetails() {
   const {
@@ -59,6 +59,15 @@ export default function AdvertisementDetails() {
         >
           <ArrowLeft color={theme.colors['gray-1']} />
         </S.BackButton>
+
+        {advertisement?.product_images.length === 0 ? (
+          <NoProductImage />
+        ) : (
+          <Carousel
+            images={advertisement?.product_images}
+            isActive={advertisement?.is_active}
+          />
+        )}
 
         <Carousel
           images={advertisement?.product_images}
