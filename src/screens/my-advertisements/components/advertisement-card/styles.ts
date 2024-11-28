@@ -15,6 +15,7 @@ export const Overlay = styled.View`
   top: 0;
   left: 0;
   z-index: 100;
+  border-radius: 8px;
 `
 
 export const ImageAd = styled(Image)`

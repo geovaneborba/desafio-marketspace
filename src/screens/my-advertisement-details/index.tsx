@@ -1,6 +1,6 @@
 // React and React Native
 import { useCallback, useState } from 'react'
-import { ScrollView } from 'react-native'
+import { ScrollView, View, Text } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useTheme } from 'styled-components/native'
 import {
@@ -29,6 +29,7 @@ import { Exchange } from './components/exchange'
 
 import * as S from '@/screens/my-advertisement-details/styles'
 import { AdvertisementSkeleton } from './components/advertisement-skeleton'
+import { NoProductImage } from './components/no-product-image'
 
 export default function MyAdvertisementDetails() {
   const {
@@ -139,10 +140,14 @@ export default function MyAdvertisementDetails() {
       >
         <Header productId={String(id)} />
 
-        <Carousel
-          isActive={advertisement?.is_active}
-          images={advertisement?.product_images}
-        />
+        {advertisement?.product_images.length > 0 ? (
+          <Carousel
+            isActive={advertisement?.is_active}
+            images={advertisement?.product_images}
+          />
+        ) : (
+          <NoProductImage isActive={advertisement?.is_active} />
+        )}
 
         <User advertisement={advertisement} />
         <Description advertisement={advertisement} />

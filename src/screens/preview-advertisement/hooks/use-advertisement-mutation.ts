@@ -62,7 +62,6 @@ export function useAdvertisementMutation() {
       accept_trade: acceptTrade,
       payment_methods: paymentFormatted,
       user_id: user.id,
-      is_active: true,
     })
 
     const product = response.data

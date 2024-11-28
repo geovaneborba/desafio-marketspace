@@ -5,6 +5,7 @@ import { AppRoutesNavigatorProps } from '@/routes/app.routes'
 import { api } from '@/lib/axios'
 import { formatToBRLCurrency } from '@/utils/format-product-price'
 import { UserAdvertisementListDTO } from '@/dtos/user-advertisement-list-dto'
+import { NoProductImage } from '../no-product-image'
 
 type AdCardProps = {
   navigation: AppRoutesNavigatorProps
@@ -12,7 +13,9 @@ type AdCardProps = {
 }
 
 export function AdvertisementCard({ advertisement, navigation }: AdCardProps) {
-  const productImage = `${api.defaults.baseURL}/images/${advertisement.product_images[0].path}`
+  const productImage =
+    advertisement.product_images.length > 0 &&
+    `${api.defaults.baseURL}/images/${advertisement.product_images[0].path}`
 
   return (
     <S.CardPressable
@@ -29,11 +32,15 @@ export function AdvertisementCard({ advertisement, navigation }: AdCardProps) {
           </S.ConditionText>
         </S.Condition>
 
-        <S.ImageAd
-          source={{
-            uri: productImage,
-          }}
-        />
+        {productImage ? (
+          <S.ImageAd
+            source={{
+              uri: productImage,
+            }}
+          />
+        ) : (
+          <NoProductImage />
+        )}
 
         {!advertisement.is_active && <S.Overlay />}
         {!advertisement.is_active && (

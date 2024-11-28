@@ -1,9 +1,11 @@
-import { formatToBRLCurrency } from '@/utils/format-product-price'
-import * as S from './styles'
 import { api } from '@/lib/axios'
-import { AppRoutesNavigatorProps } from '@/routes/app.routes'
+import { formatToBRLCurrency } from '@/utils/format-product-price'
 import { AdvertisementListDTO } from '@/dtos/advertisement-list-dto'
+
+import { AppRoutesNavigatorProps } from '@/routes/app.routes'
+
 import NoProductImage from '@/assets/images/no-product-image.svg'
+import * as S from './styles'
 
 type CardAdProps = {
   advertisement: AdvertisementListDTO
@@ -15,7 +17,7 @@ export function CardAdvertisement({ advertisement, navigation }: CardAdProps) {
 
   const userAvatar = `${api.defaults.baseURL}/images/${user.avatar}`
   const productImage =
-    product_images.length !== 0 &&
+    product_images.length > 0 &&
     `${api.defaults.baseURL}/images/${product_images[0].path}`
 
   return (
