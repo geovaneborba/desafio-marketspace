@@ -50,6 +50,8 @@ export default function AdvertisementDetails() {
     return <AdvertisementSkeleton />
   }
 
+  console.log(advertisement?.product_images.length === 0)
+
   return (
     <S.Container>
       <S.ScrollView style={{ flexGrow: 1 }}>
@@ -68,11 +70,6 @@ export default function AdvertisementDetails() {
             isActive={advertisement?.is_active}
           />
         )}
-
-        <Carousel
-          images={advertisement?.product_images}
-          isActive={advertisement?.is_active}
-        />
 
         <User user={advertisement?.user} />
 
