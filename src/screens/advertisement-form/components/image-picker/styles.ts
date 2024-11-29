@@ -1,5 +1,4 @@
 import styled from 'styled-components/native'
-import { Image as ImageNative } from 'react-native'
 
 export const ImagePickerContainer = styled.View`
   margin-top: 16px;
@@ -26,7 +25,7 @@ export const ButtonRemoveImage = styled.Pressable`
   padding: 2px;
 `
 
-export const Image = styled(ImageNative)`
+export const Image = styled.Image`
   height: 100px;
   width: 100px;
   border-radius: 6px;
