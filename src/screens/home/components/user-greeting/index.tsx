@@ -32,7 +32,7 @@ export function UserGreeting() {
           <S.UserAvatar source={{ uri: userAvatarUrl }} />
           <S.Greeting>
             Boas vindas, {'\n'}
-            <S.Name>{getFirstLastName('geovane borba da silva')}!</S.Name>
+            <S.Name>{getFirstLastName(user.name)}!</S.Name>
           </S.Greeting>
         </S.User>
 

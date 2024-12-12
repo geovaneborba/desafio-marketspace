@@ -60,11 +60,17 @@ export const StatusText = styled(Text)`
   font-family: ${(props) => props.theme.fontFamily.bold};
 `
 
+export const TitleContainer = styled.View`
+  flex-direction: row;
+`
+
 export const Title = styled.Text`
   font-size: ${(props) => props.theme.fontSize.md};
   color: ${({ theme }) => theme.colors['gray-2']};
   font-family: ${(props) => props.theme.fontFamily.regular};
   margin-top: 4px;
+  flex: 1;
+  flex-wrap: wrap;
 `
 
 export const Currency = styled.Text`

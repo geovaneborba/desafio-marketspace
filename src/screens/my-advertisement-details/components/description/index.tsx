@@ -14,6 +14,7 @@ export function Description({ advertisement }: DescriptionProps) {
       </S.TagContainer>
       <S.RowContainer>
         <S.Title>{advertisement?.name}</S.Title>
+
         <S.Price>
           <S.Currency>r$ </S.Currency>
           {formatToBRLCurrency(advertisement?.price ?? 0)}

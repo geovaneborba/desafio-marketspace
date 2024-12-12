@@ -48,7 +48,10 @@ export function AdvertisementCard({ advertisement, navigation }: AdCardProps) {
         )}
       </S.ImageContainer>
 
-      <S.Title>{advertisement.name}</S.Title>
+      <S.TitleContainer>
+        <S.Title>{advertisement.name}</S.Title>
+      </S.TitleContainer>
+
       <S.Price>
         <S.Currency>r$</S.Currency> {formatToBRLCurrency(advertisement.price)}
       </S.Price>

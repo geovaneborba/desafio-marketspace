@@ -1,9 +1,8 @@
-import { View, Image, Text, Pressable } from 'react-native'
 import styled from 'styled-components/native'
 
-export const ProductItemPressable = styled(Pressable)``
+export const ProductItemPressable = styled.Pressable``
 
-export const ContainerRelative = styled(View)`
+export const ContainerRelative = styled.View`
   position: relative;
   background-color: ${(props) => props.theme.colors['gray-7']};
   border-radius: 8px;
@@ -18,7 +17,7 @@ export const ProfileImage = styled.Image`
   border-radius: 12px;
   border: 1px solid ${({ theme }) => theme.colors['gray-7']};
 `
-export const ProductCondition = styled(View)<{ isNew: boolean }>`
+export const ProductCondition = styled.View<{ isNew: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,32 +32,40 @@ export const ProductCondition = styled(View)<{ isNew: boolean }>`
       ? props.theme.colors.blue
       : props.theme.colors['gray-1']};
 `
-export const ProductConditionText = styled(Text)`
+export const ProductConditionText = styled.Text`
   font-family: ${(props) => props.theme.fontFamily.bold};
   font-size: ${(props) => props.theme.fontSize.xs};
   color: ${(props) => props.theme.colors['gray-7']};
   text-transform: uppercase;
 `
-export const ProductImage = styled(Image)`
+export const ProductImage = styled.Image`
   width: 153px;
   height: 100px;
   flex-grow: 1;
   border-radius: 8px;
   object-fit: cover;
 `
-export const ProductName = styled(Text)`
+
+export const ProductTextContainer = styled.View`
+  flex-direction: row;
+`
+
+export const ProductName = styled.Text`
   font-family: ${(props) => props.theme.fontFamily.regular};
   font-size: ${(props) => props.theme.fontSize.md};
   color: ${({ theme }) => theme.colors['gray-2']};
   margin-top: 4px;
+  flex: 1;
+  flex-wrap: wrap;
 `
-export const ProductCurrency = styled(Text)`
+
+export const ProductCurrency = styled.Text`
   font-family: ${(props) => props.theme.fontFamily.bold};
   font-size: ${(props) => props.theme.fontSize.sm};
   color: ${(props) => props.theme.colors['gray-1']};
   text-transform: uppercase;
 `
-export const ProductPrice = styled(Text)`
+export const ProductPrice = styled.Text`
   font-family: ${(props) => props.theme.fontFamily.bold};
   font-size: ${(props) => props.theme.fontSize.base};
   color: ${({ theme }) => theme.colors['gray-1']};

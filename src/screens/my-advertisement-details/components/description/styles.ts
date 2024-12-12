@@ -29,6 +29,8 @@ export const Title = styled.Text`
   font-family: ${(props) => props.theme.fontFamily.bold};
   font-size: ${(props) => props.theme.fontSize.xl};
   color: ${(props) => props.theme.colors['gray-1']};
+  flex: 1;
+  flex-wrap: wrap;
 `
 export const Currency = styled(ProductCurrency)`
   color: ${(props) => props.theme.colors['blue-light']};
