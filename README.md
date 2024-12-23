@@ -1,50 +1,102 @@
-# Welcome to your Expo app 👋
+<p align="center">
+  <img alt="Repo size"  src="https://img.shields.io/github/repo-size/geovaneborba/desafio-marketspace?color=4f46e5&style=for-the-badge">
+  <img alt="GitHub top language"  src="https://img.shields.io/github/languages/top/geovaneborba/desafio-marketspace?color=4f46e5&style=for-the-badge"> <img alt="GitHub language count"  src="https://img.shields.io/github/languages/count/geovaneborba/desafio-marketspace?color=4f46e5&style=for-the-badge">
+</p>
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+<p align="center">
+  <a href="#dart-sobre">Sobre</a> &#xa0; | &#xa0;
+  <a href="#books-aprendizado">Aprendizado</a> &#xa0; | &#xa0;
+  <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
+  <a href="#warning-pré-requisitos"> Pré requisitos</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-começando">Começando</a> &#xa0; | &#xa0;
+  <a href="https://github.com/geovaneborba" target="_blank">Autor</a>
+</p>
 
-## Get started
+<br>
 
-1. Install dependencies
+## :dart: Sobre
 
-   ```bash
-   npm install
-   ```
+Marketspace é uma aplicação de anúncios de produtos inspirada no estilo OLX. Com ela, os usuários podem criar e gerenciar anúncios, buscar produtos utilizando filtros avançados, visualizar itens disponíveis e entrar em contato com vendedores diretamente pelo WhatsApp.
 
-2. Start the app
+### Principais funcionalidades:
 
-   ```bash
-    npx expo start
-   ```
+- Login e cadastro de usuários.
+- Autenticação JWT e Refresh Token.
+- Listagem de produtos com busca e filtros.
+- Gerenciamento de produtos.
+- Envio de múltiplas imagens.
+- Visualização de preview antes de criar o anúncio.
+- Envio de mensagem via WhatsApp.
 
-In the output, you'll find options to open the app in a
+<p align="right">(<a href="#top">Voltar para o topo</a>)</p>
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## :books: Aprendizado
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Com a construção desta aplicação eu pude aprimorar ainda mais meus conhecimentos em:
 
-## Get a fresh project
+- Autenticação JWT e Refresh Token
+- Caching e revalidação
+- Estados
+- Context API
+- Consumo de API com React Query
+- Manipulação de imagens
+- Upload de múltiplas imagens
+- Formulários e Validação
+- Navegação com rotas autenticadas com stack e tabs
+- Custom Hooks
+- Loading e Skeleton UI para proporcionar uma experiência de carregamento mais agradável aos usuários
+- Mensagem de Toast para fornecer feedback aos usuários
+- Navegação com stack + tabs e envio de parâmetros entre telas
 
-When you're ready, run:
+<p align="right">(<a href="#top">Voltar para o topo</a>)</p>
+
+## :rocket: Tecnologias
+
+As seguintes tecnologias foram usadas na construção do projeto:
+
+- TypeScript
+- React Native
+- Expo
+- React Navigation
+- Styled Components
+- Axios
+- React Hook Form
+- Zod
+- React Query
+
+Outras dependências e ferramentas utilizadas podem ser encontradas no arquivo package.json
+
+<p align="right">(<a href="#top">Voltar para o topo</a>)</p>
+
+## :warning: Pré-requisitos
+
+Antes de começar, você precisa ter o [Git](https://git-scm.com) e o [Node](https://nodejs.org/en/) instalados em sua maquina. E também você irá precisar de um emulador de dispositivos móveis ou um dispositivo físico para rodar o projeto.
+
+<p align="right">(<a href="#top">Voltar para o topo</a>)</p>
+
+## :checkered_flag: Começando
 
 ```bash
-npm run reset-project
+# Clone os repositórios abaixo
+$ git clone https://github.com/geovaneborba/desafio-marketspace.git
+$ git clone https://github.com/geovaneborba/desafio-marketspace-api.git
+
+# Entre na pasta e instale as dependências
+$ cd desafio-marketspace && yarn install
+
+# Inicie o projeto usando emulador ios
+$ npx expo start -c --ios
+
+# Inicie o projeto usando emulador android
+$ npx expo start -c --android
+
+# Em outra janela do terminal, entre na pasta da api, instale as dependências e inicie o projeto
+$ cd desafio-marketspace-api && npm install && npm run dev
+
+# O aplicativo será iniciado e você receberá informações no terminal sobre o endereço e a porta onde ele estará disponível
+
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+<p align="right">(<a href="#top">Voltar para o topo</a>)</p>
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+<p align="center">Feito com ❤️ por <a href="https://github.com/geovaneborba" target="_blank">Geovane Borba</a></p>
