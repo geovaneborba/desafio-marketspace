@@ -1,4 +1,5 @@
-![Marketspace](https://github.com/user-attachments/assets/123a4778-ad57-456b-b0c8-f6edd97bd1ef)
+![marketspace](https://github.com/user-attachments/assets/7b798714-a86e-416a-a83e-1eb2c9087c8c)
+
 
 <p align="center">
   <img alt="Repo size"  src="https://img.shields.io/github/repo-size/geovaneborba/desafio-marketspace?color=4f46e5&style=for-the-badge">
