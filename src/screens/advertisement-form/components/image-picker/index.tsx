@@ -57,6 +57,7 @@ export function ImagePicker() {
           type: 'error',
           text1: 'Erro',
           text2: 'Você só pode selecionar no máximo 3 imagens!',
+          visibilityTime: 2000,
         })
       }
 
@@ -73,6 +74,7 @@ export function ImagePicker() {
               type: 'error',
               text1: 'Erro',
               text2: 'Essa imagem é muito grande. Escolha uma de até 5MB.',
+              visibilityTime: 2000,
             })
           }
 
@@ -101,6 +103,7 @@ export function ImagePicker() {
         type: 'error',
         text1: 'Erro',
         text2: 'Não foi possível selecionar a imagem. Tente novamente!',
+        visibilityTime: 2000,
       })
     }
   }
@@ -129,6 +132,7 @@ export function ImagePicker() {
         type: 'error',
         text1: 'Erro',
         text2: 'Não foi possível remover a imagem. Tente novamente!',
+        visibilityTime: 2000,
       })
     }
   }

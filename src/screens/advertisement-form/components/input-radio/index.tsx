@@ -5,7 +5,6 @@ import * as S from './styles'
 
 import { View } from 'react-native'
 
-import { useEditAdvertisementForm } from '@/contexts/edit-advertisement-form'
 import { InputErrorMessage } from '@/components/input-error-message'
 import { useAdvertisementForm } from '@/contexts/advertisement-form'
 
@@ -23,7 +22,7 @@ export function InputRadio({ defaultValue, errorMessage }: InputRadioProps) {
   const radioButtons: RadioButtonProps[] = useMemo(
     () => [
       {
-        id: 'new', // acts as primary key, should be unique and non-empty string
+        id: 'new',
         label: 'Produto novo',
         color: theme.colors['blue-light'],
         size: 24,

@@ -116,6 +116,7 @@ export default function SignUp() {
         text1: 'Sucesso',
         text2: 'Sua conta foi criada com sucesso!',
         onHide: () => navigation.navigate('signIn'),
+        visibilityTime: 2000,
       })
     },
     onError(error) {
@@ -131,6 +132,7 @@ export default function SignUp() {
           text1: 'Erro',
           text2:
             'Ocorreu um erro ao criar a conta. Por favor, tente novamente mais tarde.',
+          visibilityTime: 2000,
         })
       }
 

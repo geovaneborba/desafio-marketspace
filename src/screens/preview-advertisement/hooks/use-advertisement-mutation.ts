@@ -138,6 +138,7 @@ export function useAdvertisementMutation() {
         text1: 'Sucesso',
         text2: 'Seu anúncio foi publicado com sucesso!',
         onHide: () => navigation.navigate('myAdvertisements'),
+        visibilityTime: 2000,
       })
     },
     onError(error) {
@@ -147,6 +148,7 @@ export function useAdvertisementMutation() {
         type: 'error',
         text1: 'Erro',
         text2: error.message,
+        visibilityTime: 2000,
       })
     },
   })
@@ -166,6 +168,7 @@ export function useAdvertisementMutation() {
         text1: 'Sucesso',
         text2: 'Seu anúncio foi editado com sucesso!',
         onHide: () => navigation.navigate('myAdvertisements'),
+        visibilityTime: 2000,
       })
     },
     onError(error) {
@@ -174,6 +177,7 @@ export function useAdvertisementMutation() {
         type: 'error',
         text1: 'Erro',
         text2: error.message,
+        visibilityTime: 2000,
       })
     },
   })

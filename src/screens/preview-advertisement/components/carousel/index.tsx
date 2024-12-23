@@ -84,7 +84,10 @@ export function Carousel({ images, isActive }: CarouselProps) {
         decelerationRate="fast"
         viewabilityConfigCallbackPairs={viewabilityConfigCallbackPairs.current}
       />
-      <Pagination total={images?.length} paginationIndex={paginationIndex} />
+
+      {images.length > 1 && (
+        <Pagination total={images?.length} paginationIndex={paginationIndex} />
+      )}
 
       {isActive === false && (
         <S.Overlay>

@@ -26,7 +26,7 @@ let failedQueued: Array<PromiseType> = []
 let isRefreshing = false
 
 const fakeAPIDelay = () => {
-  const delay = 3000
+  const delay = 1000
   console.log(
     `request with delay ${delay}ms dont forget to remove this in production`,
   )

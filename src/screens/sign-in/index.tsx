@@ -48,6 +48,7 @@ export default function SignIn() {
         type: 'error',
         text1: 'Erro',
         text2: error.message,
+        visibilityTime: 2000,
       })
 
       if (error instanceof AxiosError) {
@@ -56,6 +57,7 @@ export default function SignIn() {
           text1: 'Erro',
           text2:
             'Ocorreu um erro ao fazer login. Por favor, tente novamente mais tarde.',
+          visibilityTime: 2000,
         })
       }
 

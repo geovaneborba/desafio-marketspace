@@ -1,6 +1,5 @@
-// React and React Native
 import { useCallback, useState } from 'react'
-import { ScrollView, View, Text } from 'react-native'
+import { ScrollView } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useTheme } from 'styled-components/native'
 import {
@@ -64,7 +63,7 @@ export default function MyAdvertisementDetails() {
         text1: 'Sucesso',
         text2: 'Seu anúncio foi excluído com sucesso!',
         onHide: () => navigation.navigate('myAdvertisements'),
-        visibilityTime: 500,
+        visibilityTime: 2000,
       })
     },
     onError: (error) => {
@@ -73,6 +72,7 @@ export default function MyAdvertisementDetails() {
         type: 'error',
         text1: 'Erro',
         text2: error.message,
+        visibilityTime: 2000,
       })
     },
   })
@@ -86,7 +86,7 @@ export default function MyAdvertisementDetails() {
         type: 'success',
         text1: 'Sucesso',
         text2: `Seu anúncio foi ${status ? 'reativado' : 'desativado'} com sucesso!`,
-        visibilityTime: 3000,
+        visibilityTime: 2000,
         onHide: () => refetch(),
       })
     },
@@ -96,6 +96,7 @@ export default function MyAdvertisementDetails() {
         type: 'error',
         text1: 'Erro',
         text2: error.message,
+        visibilityTime: 2000,
       })
     },
   })

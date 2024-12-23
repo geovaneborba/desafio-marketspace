@@ -6,7 +6,6 @@ import { useTheme } from 'styled-components/native'
 import * as S from './styles'
 
 import { Linking } from 'react-native'
-import { useFocusEffect } from '@react-navigation/native'
 import { formatToBRLCurrency } from '@/utils/format-product-price'
 
 type DialogContactProps = {
